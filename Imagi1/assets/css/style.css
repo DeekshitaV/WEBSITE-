@@ -181,7 +181,7 @@ a:hover,
 }
 a,
 button {
-  color: #fff;
+  color: rgb(150, 10, 168);
   outline: medium none;
 }
 button:focus,
