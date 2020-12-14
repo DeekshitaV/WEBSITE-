@@ -62,7 +62,7 @@ router.post(
         subject: "Verification email",
         text: "Hi "+ name+" ! Reset your password with this link",
         html:
-          '<a href="http://imagiminds.herokuapp.com/verify/'+token+'/'+email+'">Verify my account</a>'
+          '<a href="http://imagimindsstem.herokuapp.com/verify/'+token+'/'+email+'">Verify my account</a>'
       };
     
       transporter.sendMail(mailDetails, (err, data) => {
@@ -148,7 +148,7 @@ router.post("/forgot", async (req, res) => {
     to: e,
     subject: "Reset password",
     html:
-      '<a href="http://imagiminds.herokuapp.com/resetpassword?email=' +
+      '<a href="http://imagimindsstem.herokuapp.com/resetpassword?email=' +
       e +
       "&token=" +
       token +
