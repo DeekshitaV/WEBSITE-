@@ -62,7 +62,7 @@ router.post(
         subject: "Verification email",
         text: "Hi "+ name+" ! Reset your password with this link",
         html:
-          '<a href="http://imagiminds.herokuapp.com/verify/'+token+'/'+email+'">Verify my account</a>'
+          '<a href="http://imagimindsstem.herokuapp.com/verify/'+token+'/'+email+'">Verify my account</a>'
       };
     
       transporter.sendMail(mailDetails, (err, data) => {
@@ -148,7 +148,7 @@ router.post("/forgot", async (req, res) => {
     to: e,
     subject: "Reset password",
     html:
-      '<a href="http://imagiminds.herokuapp.com/resetpassword?email=' +
+      '<a href="http://imagimindsstem.herokuapp.com/resetpassword?email=' +
       e +
       "&token=" +
       token +
@@ -160,13 +160,10 @@ router.post("/forgot", async (req, res) => {
     else console.log("mail sent");
   });
   // res.send("check your inbox");
-  //res.redirect("/");
-  function f1()
-  {
-    res.redirect("/");
-  }
+  res.redirect("/");
+  
 
-  setTimeout(f1,4000000);
+  setTimeout(f1,1000);
 });
 
 router.post("/finalreset", async (req, res) => {
@@ -179,12 +176,9 @@ router.post("/finalreset", async (req, res) => {
   user.password = p;
   await user.save();
   console.log(user.email + " " + user.password);
- // res.redirect("/login");
-   function f2()
-  {
-    res.redirect("/login"); 
-  }
-  setTimeout(f2,4000000);
+ res.redirect("/login");
+   
+  setTimeout(f2,1000);
 
   // res.send("check your inbox");
  // res.redirect("/");
