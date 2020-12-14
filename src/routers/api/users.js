@@ -12,8 +12,8 @@ const nodemailer = require("nodemailer");
 let transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "imagiminds.dt@gmail.com",
-    pass: "devanshi1234",
+    user: "imagimindsstem@gmail.com",
+    pass: "Imagiminds@333",
   },
   tls: {
     rejectUnauthorized: false,
@@ -57,7 +57,7 @@ router.post(
 
       //send verification mail
       let mailDetails = {
-        from: "imagiminds.dt@gmail.com",
+        from: "Imagiminds <imagimindsstem@gmail.com>",
         to: email,
         subject: "Verification email",
         text: "Hi "+ name+" ! Reset your password with this link",
@@ -144,7 +144,7 @@ router.post("/forgot", async (req, res) => {
   }
   const token = user.generateAuthToken();
   let mailDetails = {
-    from: "imagiminds.dt@gmail.com",
+    from: "Imagiminds <imagimindsstem@gmail.com>",
     to: e,
     subject: "Reset password",
     html:
