@@ -37,6 +37,14 @@ app.get("/courses", (req, res) => {
   res.sendFile(path.join(__dirname, "./Imagi1/courses.html"));
 });
 
+app.get("/usercourses", (req, res) => {
+  res.sendFile(path.join(__dirname, "./Imagi1/user_courses.html"));
+});
+
+app.get("/course_ar_vr", (req, res) => {
+  res.sendFile(path.join(__dirname, "./Imagi1/course-detail-ar_vr.html"));
+});
+
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "./Imagi1/login.html"));
 });
