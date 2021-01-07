@@ -23,7 +23,7 @@ loginForm.addEventListener("submit", async (e) => {
     para.style.margin = "10px auto";
     para.style.background = "white";
     errorsDiv.appendChild(para);
-    var query = "https://imagimindsstem.herokuapp.com/userlogin?";
+    var query = "http://www.imagiminds.live/userlogin?";
     query+=encodeURIComponent('email') + '=' + encodeURIComponent(email);
     window.location.href=query;
   } catch (err) {
